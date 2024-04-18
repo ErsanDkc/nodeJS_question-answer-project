@@ -1,8 +1,9 @@
 const express = require("express")
 require("dotenv/config");
 const router = require("./routers")
-
-
+const connectDatabase = require("./helpers/database/connectDatabase")
+//mongo Db connections
+connectDatabase()
 const app = express();
 app.use(express.json())
 
